@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pdfplumber
+PyPDF2
+pandas
+openpyxl
+python-multipart
+sqlalchemy
+passlib[bcrypt]
+python-jose[cryptography]
