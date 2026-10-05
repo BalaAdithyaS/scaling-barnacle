@@ -7,6 +7,7 @@ SQLALCHEMY_DATABASE_URL = "sqlite:///./finxtract.db"
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
 )
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+# TODO: Fix issue
+# Possible overload variants:
 
 Base = declarative_base()
