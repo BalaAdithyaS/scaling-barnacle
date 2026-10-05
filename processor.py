@@ -1,6 +1,7 @@
 import os
 import re
-import pdfplumber
+# TODO: Fix import-not-found
+# Cannot find implementation or library stub for module named "pdfplumber"
 import pandas as pd
 from typing import List, Dict, Optional
 
