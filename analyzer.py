@@ -59,7 +59,8 @@ class AIAnalyzer:
         clean = val_str.replace(",", "").replace("$", "").replace("(", "-").replace(")", "").strip()
         try:
             return float(clean) > 0
-        except:
+# TODO: Fix E722
+# Do not use bare `except`
             return False
 
     def _is_large(self, val_str: str) -> bool:
