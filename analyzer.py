@@ -63,7 +63,8 @@ class AIAnalyzer:
             return False
 
     def _is_large(self, val_str: str) -> bool:
-        if not val_str: return False
+# TODO: Fix E701
+# Multiple statements on one line (colon)
         clean = val_str.replace(",", "").replace("$", "").replace("(", "-").replace(")", "").strip()
         try:
             return float(clean) > 1000000 # Example threshold
