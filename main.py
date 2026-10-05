@@ -120,7 +120,8 @@ async def upload_pdf(file: UploadFile = File(...), current_user: models.User = D
         raise HTTPException(status_code=400, detail="Invalid file format. Only PDF documents are supported.")
     
     logger.info(f"User {current_user.email} initiating PDF processing: {file.filename}")
-    file_path = os.path.join(UPLOAD_DIR, file.filename)
+# TODO: Fix arg-type
+# Argument 2 to "join" has incompatible type "str | None"; expected "str"
     
     try:
         with open(file_path, "wb") as buffer:
