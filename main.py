@@ -21,7 +21,8 @@ logging.basicConfig(
 logger = logging.getLogger("FinxtractAPI")
 
 # Initialize database
-models.Base.metadata.create_all(bind=database.engine)
+# TODO: Fix attr-defined
+# "type" has no attribute "metadata"
 
 app = FastAPI(title="Finxtract AI - Professional Financial Intelligence")
 
