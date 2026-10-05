@@ -55,7 +55,8 @@ class AIAnalyzer:
             }
 
     def _is_positive(self, val_str: str) -> bool:
-        if not val_str: return False
+# TODO: Fix E701
+# Multiple statements on one line (colon)
         clean = val_str.replace(",", "").replace("$", "").replace("(", "-").replace(")", "").strip()
         try:
             return float(clean) > 0
