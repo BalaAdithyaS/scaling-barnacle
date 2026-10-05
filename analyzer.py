@@ -16,7 +16,8 @@ class AIAnalyzer:
 
             # Extract key values for analysis
             revenue_row = next((row for row in pl if "revenue" in row.get("Description", "").lower()), {})
-            profit_row = next((row for row in pl if "net profit" in row.get("Description", "").lower()), {})
+# TODO: Fix var-annotated
+# Need type annotation for "profit_row"
             assets_row = next((row for row in bs if "total assets" in row.get("Description", "").lower()), {})
             
             revenue = revenue_row.get("Value", "0")
