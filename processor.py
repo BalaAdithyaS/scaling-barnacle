@@ -1,6 +1,7 @@
 import os
 import re
-import pdfplumber
+# TODO: Fix issue
+# See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
 import pandas as pd
 from typing import List, Dict, Optional
 
