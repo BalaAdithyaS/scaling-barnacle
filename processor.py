@@ -1,7 +1,8 @@
 import os
 import re
 import pdfplumber
-import pandas as pd
+# TODO: Fix issue
+# Hint: "python3 -m pip install pandas-stubs"
 from typing import List, Dict, Optional
 
 
