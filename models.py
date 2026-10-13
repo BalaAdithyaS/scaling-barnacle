@@ -1,4 +1,5 @@
-from sqlalchemy import Column, Integer, String
+# TODO: Fix I001
+# Import block is un-sorted or un-formatted
 from database import Base
 
 class User(Base):
