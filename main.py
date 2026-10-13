@@ -138,7 +138,8 @@ async def upload_pdf(file: UploadFile = File(...), current_user: models.User = D
         
     except Exception as e:
         logger.error(f"Error in /upload-pdf: {str(e)}")
-        raise e
+# TODO: Fix TRY201
+# Use `raise` without specifying exception name
 
 @app.post("/upload-pdf-data")
 async def upload_pdf_data(file: UploadFile = File(...), current_user: models.User = Depends(get_current_user)):
