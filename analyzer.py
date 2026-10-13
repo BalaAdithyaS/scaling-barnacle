@@ -1,5 +1,6 @@
 import json
-from typing import Dict, List
+# TODO: Fix UP035
+# `typing.List` is deprecated, use `list` instead
 
 class AIAnalyzer:
     def __init__(self):
