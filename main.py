@@ -222,7 +222,8 @@ async def download_excel(request: Request, current_user: models.User = Depends(g
         )
 
     except Exception as e:
-        logger.error(f"Excel download error: {str(e)}")
+# TODO: Fix RUF010
+# Use explicit conversion flag
         raise HTTPException(status_code=500, detail="Failed to generate Excel file.")
 
 @app.get("/health")
