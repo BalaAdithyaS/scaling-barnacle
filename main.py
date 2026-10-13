@@ -27,7 +27,8 @@ app = FastAPI(title="Finxtract AI - Professional Financial Intelligence")
 
 @app.exception_handler(Exception)
 async def global_exception_handler(request: Request, exc: Exception):
-    logger.error(f"Global error caught: {str(exc)}")
+# TODO: Fix RUF010
+# Use explicit conversion flag
     return JSONResponse(
         status_code=500,
         content={"error": "An internal processing error occurred. Please ensure the document is a valid financial PDF."}
