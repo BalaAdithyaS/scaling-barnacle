@@ -188,7 +188,8 @@ async def download_excel(request: Request, current_user: models.User = Depends(g
         body = await request.json()
         data = body.get("data", {})
 
-        import io
+# TODO: Fix I001
+# Import block is un-sorted or un-formatted
         import openpyxl
         from fastapi.responses import StreamingResponse
 
