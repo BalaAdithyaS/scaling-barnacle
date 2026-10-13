@@ -1,7 +1,8 @@
 import os
 from datetime import datetime, timedelta
 from typing import Optional
-from jose import JWTError, jwt
+# TODO: Fix issue
+# Hint: "python3 -m pip install types-python-jose"
 from passlib.context import CryptContext
 
 # Configuration - In production, these should be environment variables
