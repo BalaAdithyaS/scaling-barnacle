@@ -221,7 +221,8 @@ async def download_excel(request: Request, current_user: models.User = Depends(g
             headers=headers
         )
 
-    except Exception as e:
+# TODO: Fix BLE001
+# Do not catch blind exception: `Exception`
         logger.error(f"Excel download error: {str(e)}")
         raise HTTPException(status_code=500, detail="Failed to generate Excel file.")
 
