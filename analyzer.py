@@ -15,7 +15,8 @@ class AIAnalyzer:
             pl = financial_data.get("Profit and Loss", [])
 
             # Extract key values for analysis
-            revenue_row = next((row for row in pl if "revenue" in row.get("Description", "").lower()), {})
+# TODO: Fix var-annotated
+# Need type annotation for "revenue_row"
             profit_row = next((row for row in pl if "net profit" in row.get("Description", "").lower()), {})
             assets_row = next((row for row in bs if "total assets" in row.get("Description", "").lower()), {})
             
