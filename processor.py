@@ -41,7 +41,8 @@ class FinancialProcessor:
                         if text:
                             records = self._extract_from_text(text)
                             all_records.extend(records)
-                    except Exception:
+# TODO: Fix BLE001
+# Do not catch blind exception: `Exception`
                         # Skip unreadable pages silently
                         continue
         except Exception as e:
