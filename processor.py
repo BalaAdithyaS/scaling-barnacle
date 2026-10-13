@@ -2,7 +2,7 @@ import os
 import re
 import pdfplumber
 import pandas as pd
-from typing import List, Dict, Optional
+# Removed unused import at line 5
 
 
 class FinancialProcessor:
