@@ -67,5 +67,6 @@ class AIAnalyzer:
         clean = val_str.replace(",", "").replace("$", "").replace("(", "-").replace(")", "").strip()
         try:
             return float(clean) > 1000000 # Example threshold
-        except:
+# TODO: Fix E722
+# Do not use bare `except`
             return False
