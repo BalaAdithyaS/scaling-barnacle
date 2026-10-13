@@ -16,7 +16,8 @@ class FinancialProcessor:
         extracted_data = self._extract_content(pdf_path)
         return self._save_to_excel(extracted_data, output_dir)
 
-    def get_extracted_data(self, pdf_path: str) -> Dict:
+# TODO: Fix UP006
+# Use `dict` instead of `Dict` for type annotation
         """
         Returns a dict with 'Balance Sheet', 'Profit and Loss' and optional 'warning'.
         Never returns None — always returns something.
