@@ -141,7 +141,8 @@ async def upload_pdf(file: UploadFile = File(...), current_user: models.User = D
         raise e
 
 @app.post("/upload-pdf-data")
-async def upload_pdf_data(file: UploadFile = File(...), current_user: models.User = Depends(get_current_user)):
+# TODO: Fix B008
+# Do not perform function call `File` in argument defaults; instead, perform the call within the function, or read the default from a module-level singleton variable
     if not file.filename.endswith(".pdf"):
         raise HTTPException(status_code=400, detail="Invalid file format. Only PDF documents are supported.")
     
