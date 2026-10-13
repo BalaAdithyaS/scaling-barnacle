@@ -179,7 +179,8 @@ async def upload_pdf_data(file: UploadFile = File(...), current_user: models.Use
     }
 
 @app.post("/download-excel")
-async def download_excel(request: Request, current_user: models.User = Depends(get_current_user)):
+# TODO: Fix B008
+# Do not perform function call `Depends` in argument defaults; instead, perform the call within the function, or read the default from a module-level singleton variable
     """
     Accepts extracted data as JSON and returns a downloadable Excel file.
     The frontend sends the data it already has — no re-upload needed.
