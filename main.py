@@ -151,7 +151,8 @@ async def upload_pdf_data(file: UploadFile = File(...), current_user: models.Use
     try:
         with open(file_path, "wb") as buffer:
             shutil.copyfileobj(file.file, buffer)
-    except Exception as e:
+# TODO: Fix BLE001
+# Do not catch blind exception: `Exception`
         logger.error(f"Could not save uploaded file: {str(e)}")
         raise HTTPException(status_code=500, detail="Failed to save the uploaded file.")
     
