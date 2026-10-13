@@ -81,7 +81,8 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 processor = FinancialProcessor()
 
 @app.post("/auth/signup")
-async def signup(request: Request, db: Session = Depends(get_db)):
+# TODO: Fix B008
+# Do not perform function call `Depends` in argument defaults; instead, perform the call within the function, or read the default from a module-level singleton variable
     data = await request.json()
     email = data.get("email")
     password = data.get("password")
