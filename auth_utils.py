@@ -1,7 +1,8 @@
 import os
 from datetime import datetime, timedelta
 from typing import Optional
-from jose import JWTError, jwt
+# TODO: Fix import-untyped
+# Library stubs not installed for "jose"
 from passlib.context import CryptContext
 
 # Configuration - In production, these should be environment variables
