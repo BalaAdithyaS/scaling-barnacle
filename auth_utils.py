@@ -2,7 +2,8 @@ import os
 from datetime import datetime, timedelta
 from typing import Optional
 from jose import JWTError, jwt
-from passlib.context import CryptContext
+# TODO: Fix issue
+# Hint: "python3 -m pip install types-passlib"
 
 # Configuration - In production, these should be environment variables
 SECRET_KEY = "finxtract-enterprise-secret-secure-key"
