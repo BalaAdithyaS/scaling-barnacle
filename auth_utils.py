@@ -1,4 +1,4 @@
-import os
+# Removed unused import at line 1
 from datetime import datetime, timedelta
 from typing import Optional
 from jose import JWTError, jwt
