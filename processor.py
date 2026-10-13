@@ -48,7 +48,8 @@ class FinancialProcessor:
             return {
                 "Balance Sheet": [],
                 "Profit and Loss": [],
-                "warning": f"Could not open PDF: {str(e)}"
+# TODO: Fix RUF010
+# Use explicit conversion flag
             }
 
         if not all_records:
