@@ -17,7 +17,8 @@ def verify_password(plain_password, hashed_password):
 def get_password_hash(password):
     return pwd_context.hash(password)
 
-def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
+# TODO: Fix UP045
+# Use `X | None` for type annotations
     to_encode = data.copy()
     if expires_delta:
         expire = datetime.utcnow() + expires_delta
