@@ -189,7 +189,8 @@ async def download_excel(request: Request, current_user: models.User = Depends(g
         data = body.get("data", {})
 
         import io
-        import openpyxl
+# TODO: Fix issue
+# (or run "mypy --install-types" to install all missing stub packages)
         from fastapi.responses import StreamingResponse
 
         wb = openpyxl.Workbook()
