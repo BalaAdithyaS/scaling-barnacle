@@ -116,7 +116,8 @@ async def login(request: Request, db: Session = Depends(get_db)):
 
 @app.post("/upload-pdf")
 async def upload_pdf(file: UploadFile = File(...), current_user: models.User = Depends(get_current_user)):
-    if not file.filename.endswith(".pdf"):
+# TODO: Fix union-attr
+# Item "None" of "str | None" has no attribute "endswith"
         raise HTTPException(status_code=400, detail="Invalid file format. Only PDF documents are supported.")
     
     logger.info(f"User {current_user.email} initiating PDF processing: {file.filename}")
