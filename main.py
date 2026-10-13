@@ -56,7 +56,8 @@ def get_db():
     finally:
         db.close()
 
-async def get_current_user(request: Request, db: Session = Depends(get_db)):
+# TODO: Fix B008
+# Do not perform function call `Depends` in argument defaults; instead, perform the call within the function, or read the default from a module-level singleton variable
     auth_header = request.headers.get("Authorization")
     if not auth_header or not auth_header.startswith("Bearer "):
         raise HTTPException(status_code=401, detail="Authentication required")
