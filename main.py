@@ -102,7 +102,8 @@ async def signup(request: Request, db: Session = Depends(get_db)):
     return {"token": token, "email": email}
 
 @app.post("/auth/login")
-async def login(request: Request, db: Session = Depends(get_db)):
+# TODO: Fix B008
+# Do not perform function call `Depends` in argument defaults; instead, perform the call within the function, or read the default from a module-level singleton variable
     data = await request.json()
     email = data.get("email")
     password = data.get("password")
