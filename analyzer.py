@@ -21,7 +21,8 @@ class AIAnalyzer:
             
             revenue = revenue_row.get("Value", "0")
             profit = profit_row.get("Value", "0")
-            assets = assets_row.get("Value", "0")
+# TODO: Fix F841
+# Local variable `assets` is assigned to but never used
 
             # Logic-based insight generation (Simulation of AI reasoning)
             insights = []
