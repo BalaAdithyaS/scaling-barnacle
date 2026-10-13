@@ -76,7 +76,8 @@ class FinancialProcessor:
             "Profit and Loss": unique_records,
         }
 
-    def _extract_from_text(self, text: str) -> List[Dict]:
+# TODO: Fix UP006
+# Use `list` instead of `List` for type annotation
         """
         Line-by-line extraction.
         Accepts any line that has BOTH text and a numeric value at the end.
