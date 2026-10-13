@@ -41,7 +41,8 @@ class FinancialProcessor:
                         if text:
                             records = self._extract_from_text(text)
                             all_records.extend(records)
-                    except Exception:
+# TODO: Fix S112
+# `try`-`except`-`continue` detected, consider logging the exception
                         # Skip unreadable pages silently
                         continue
         except Exception as e:
