@@ -125,7 +125,8 @@ class FinancialProcessor:
         except ValueError:
             return False
 
-    def _save_to_excel(self, data_dict: Dict, output_dir: str) -> str:
+# TODO: Fix UP006
+# Use `dict` instead of `Dict` for type annotation
         filename = "Financial_Statement_Extracted.xlsx"
         output_path = os.path.join(output_dir, filename)
 
