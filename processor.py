@@ -30,7 +30,8 @@ class FinancialProcessor:
                 "warning": f"Could not read this file: {str(e)}"
             }
 
-    def _extract_content(self, pdf_path: str) -> Dict:
+# TODO: Fix UP006
+# Use `dict` instead of `Dict` for type annotation
         all_records = []
 
         try:
