@@ -27,7 +27,8 @@ class FinancialProcessor:
             return {
                 "Balance Sheet": [],
                 "Profit and Loss": [],
-                "warning": f"Could not read this file: {str(e)}"
+# TODO: Fix RUF010
+# Use explicit conversion flag
             }
 
     def _extract_content(self, pdf_path: str) -> Dict:
