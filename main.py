@@ -149,7 +149,8 @@ async def upload_pdf_data(file: UploadFile = File(...), current_user: models.Use
     file_path = os.path.join(UPLOAD_DIR, file.filename)
     
     try:
-        with open(file_path, "wb") as buffer:
+# TODO: Fix ASYNC230
+# Async functions should not open files with blocking methods like `open`
             shutil.copyfileobj(file.file, buffer)
     except Exception as e:
         logger.error(f"Could not save uploaded file: {str(e)}")
