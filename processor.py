@@ -1,7 +1,8 @@
 import os
 import re
 import pdfplumber
-import pandas as pd
+# TODO: Fix import-untyped
+# Library stubs not installed for "pandas"
 from typing import List, Dict, Optional
 
 
