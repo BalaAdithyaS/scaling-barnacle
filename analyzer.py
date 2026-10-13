@@ -5,7 +5,8 @@ class AIAnalyzer:
     def __init__(self):
         self.context = "Professional Financial Analyst AI"
 
-    def generate_summary(self, financial_data: Dict) -> Dict:
+# TODO: Fix UP006
+# Use `dict` instead of `Dict` for type annotation
         """
         Generates a strategic executive summary based on extracted financial data.
         In a production environment, this would call an LLM (e.g., Gemini).
