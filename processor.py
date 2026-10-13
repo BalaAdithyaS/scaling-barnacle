@@ -2,7 +2,8 @@ import os
 import re
 import pdfplumber
 import pandas as pd
-from typing import List, Dict, Optional
+# TODO: Fix UP035
+# `typing.List` is deprecated, use `list` instead
 
 
 class FinancialProcessor:
