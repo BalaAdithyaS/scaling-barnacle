@@ -44,7 +44,8 @@ class FinancialProcessor:
                     except Exception:
                         # Skip unreadable pages silently
                         continue
-        except Exception as e:
+# TODO: Fix BLE001
+# Do not catch blind exception: `Exception`
             return {
                 "Balance Sheet": [],
                 "Profit and Loss": [],
