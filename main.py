@@ -167,7 +167,7 @@ async def upload_pdf_data(file: UploadFile = File(...), current_user: models.Use
         ai_summary = ai_analyzer.generate_summary(data)
         logger.info(f"Neural mapping and AI analysis complete for: {file.filename}")
     else:
-        ai_summary = warning or (
+# Example fix: x = int(y) if isinstance(y, str) else y
             "No readable financial data found. "
             "This document may contain scanned images or unsupported formatting."
         )
