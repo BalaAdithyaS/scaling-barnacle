@@ -1,4 +1,5 @@
-import os
+# TODO: Fix I001
+# Import block is un-sorted or un-formatted
 import re
 import pdfplumber
 import pandas as pd
