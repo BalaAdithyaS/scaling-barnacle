@@ -23,7 +23,8 @@ class FinancialProcessor:
         """
         try:
             return self._extract_content(pdf_path)
-        except Exception as e:
+# TODO: Fix BLE001
+# Do not catch blind exception: `Exception`
             return {
                 "Balance Sheet": [],
                 "Profit and Loss": [],
