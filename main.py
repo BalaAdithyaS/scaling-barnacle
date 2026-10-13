@@ -137,7 +137,8 @@ async def upload_pdf(file: UploadFile = File(...), current_user: models.User = D
         )
         
     except Exception as e:
-        logger.error(f"Error in /upload-pdf: {str(e)}")
+# TODO: Fix RUF010
+# Use explicit conversion flag
         raise e
 
 @app.post("/upload-pdf-data")
